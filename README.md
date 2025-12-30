@@ -4,4 +4,10 @@ How many tools i use in this projects
 2. tailwind css
 3. daisyUI
 4. npm install react-responsive-carousel
+5. npm install react-icons --save
+6. npm install react-fast-marquee --save
+7.  npm install aos --save
+
+
+
 

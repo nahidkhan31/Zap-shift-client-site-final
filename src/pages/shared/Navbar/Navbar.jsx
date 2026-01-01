@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import Logo from "../Logo/Logo";
 
 const Navbar = () => {
@@ -85,7 +85,7 @@ const Navbar = () => {
       {/* Navbar End */}
       <div className="navbar-end">
         <button className="btn btn-primary text-black rounded-full px-6">
-          Log In
+          <Link to="/login">Log In</Link>
         </button>
       </div>
     </div>

@@ -9,8 +9,10 @@ const SocialLogin = () => {
    const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from || "/";
+
+  
   const handleGoogleSignIn = () => {
-    
+
     toast.loading(
       <div className="flex items-center gap-2">
         <AiOutlineLoading3Quarters className="animate-spin text-blue-500 text-lg" />

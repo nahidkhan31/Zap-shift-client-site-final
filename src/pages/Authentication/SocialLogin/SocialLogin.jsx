@@ -1,11 +1,50 @@
-import React from 'react';
+import React from "react";
+import useAuth from "../../../hooks/useAuth";
+import { useLocation, useNavigate } from "react-router";
+import toast from "react-hot-toast";
+import { AiFillCheckCircle, AiFillCloseCircle, AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const SocialLogin = () => {
-    const handleGoogleSignIn = ()=>{
-        console.log("working")
-    }
-    return (
-         <div className="text-center">
+  const { signInWithGoogle } = useAuth();
+   const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from || "/";
+  const handleGoogleSignIn = () => {
+    
+    toast.loading(
+      <div className="flex items-center gap-2">
+        <AiOutlineLoading3Quarters className="animate-spin text-blue-500 text-lg" />
+        <span>Signing in with Google...</span>
+      </div>,
+      { id: "googleLogin" }
+    );
+    // console.log("working");
+
+
+    signInWithGoogle()
+      .then(() => {
+       toast.success(
+          <div className="flex items-center gap-2">
+            <AiFillCheckCircle className="text-green-500 text-xl" />
+            <span>Successfully logged in</span>
+          </div>,
+          { id: "googleLogin" }
+        );
+         navigate(from);
+      })
+      .catch((error) => {
+        toast.error(
+          <div className="flex items-center gap-2">
+            <AiFillCloseCircle className="text-red-500 text-xl" />
+            <span>Google login failed</span>
+          </div>,
+          { id: "googleLogin" }
+        );
+        console.log(error);
+      });
+  };
+  return (
+    <div className="text-center">
       <p className="mb-4">OR</p>
       <button
         onClick={handleGoogleSignIn}
@@ -35,7 +74,7 @@ const SocialLogin = () => {
         Login with Google
       </button>
     </div>
-    );
+  );
 };
 
 export default SocialLogin;

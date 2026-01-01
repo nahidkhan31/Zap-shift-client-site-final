@@ -10,6 +10,9 @@ How many tools i use in this projects
 8. npm install swiper
 9. npm install react-leaflet@next
 10. npm install react-hook-form (important)
+11. npm install firebase
+12. npm install react-hot-toast
+
 
 
 

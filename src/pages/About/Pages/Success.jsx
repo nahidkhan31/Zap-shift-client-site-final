@@ -18,7 +18,7 @@ const Success = () => {
       </h2>
 
       {/* Intro */}
-      <p className="text-gray-600">
+      <p className="text-white">
         Our success is measured by the confidence and satisfaction of our diverse
         clientele. We have rapidly grown into a trusted industry leader by
         maintaining impeccable service standards and achieving quantifiable
@@ -26,7 +26,7 @@ const Success = () => {
       </p>
 
       {/* Metrics */}
-      <div className="bg-base-200 p-5 rounded-xl shadow-sm space-y-4">
+      <div className="bg-blue-200 p-5 rounded-xl shadow-sm space-y-4">
         <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
           <AiOutlineCheckCircle className="text-green-500 text-2xl" />
           Impeccable Performance Metrics
@@ -60,8 +60,8 @@ const Success = () => {
       </div>
 
       {/* Scalability */}
-      <div className="bg-base-200 p-5 rounded-xl shadow-sm flex gap-4">
-        <FaIndustry className="text-4xl text-primary shrink-0" />
+      <div className="bg-amber-200 p-5 rounded-xl shadow-sm flex gap-4">
+        <FaIndustry className="text-4xl text-green-600 shrink-0" />
         <div>
           <h3 className="text-xl font-semibold text-gray-800">
             Scalability & Trust
@@ -75,8 +75,8 @@ const Success = () => {
       </div>
 
       {/* Innovation */}
-      <div className="bg-base-200 p-5 rounded-xl shadow-sm flex gap-4">
-        <MdTrackChanges className="text-4xl text-primary shrink-0" />
+      <div className="bg-cyan-100 p-5 rounded-xl shadow-sm flex gap-4">
+        <MdTrackChanges className="text-4xl text-yellow-300 shrink-0" />
         <div>
           <h3 className="text-xl font-semibold text-gray-800">
             Innovation Recognition

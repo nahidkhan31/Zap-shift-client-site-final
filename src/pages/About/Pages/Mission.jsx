@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FaRocket,
   FaUsers,
@@ -8,18 +8,19 @@ import {
 import { BiTargetLock } from "react-icons/bi";
 
 const Mission = () => {
-    return (
-        <div className="space-y-8">
+  return (
+    <div className="space-y-8">
+
       {/* Title */}
       <div className="flex items-center gap-3">
         <BiTargetLock className="text-3xl text-primary" />
-        <h2 className="text-2xl md:text-3xl font-bold text-[#03373D]">
+        <h2 className="text-2xl md:text-3xl font-bold text-amber-400">
           Our Mission
         </h2>
       </div>
 
       {/* Intro */}
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-white leading-relaxed">
         Our mission is to redefine the standards of parcel delivery through the
         relentless pursuit of speed, reliability, and transparency. We aim to be
         the most trusted and preferred logistics partner for both individuals and
@@ -28,9 +29,10 @@ const Mission = () => {
 
       {/* Mission Cards */}
       <div className="grid gap-5">
+
         {/* Technology */}
-        <div className="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition">
-          <FaRocket className="text-2xl text-primary mt-1" />
+        <div className="flex gap-4 items-start bg-purple-300 p-5 rounded-2xl border-l-4 border-blue-500 hover:border-blue-600 shadow-sm hover:bg-purple-400 hover:shadow-md transition">
+          <FaRocket className="text-2xl text-blue-500 mt-1" />
           <div>
             <h4 className="font-semibold text-[#03373D] mb-1">
               Technology-Driven Excellence
@@ -43,8 +45,8 @@ const Mission = () => {
         </div>
 
         {/* Customer */}
-        <div className="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition">
-          <FaUsers className="text-2xl text-primary mt-1" />
+        <div className="flex gap-4 items-start bg-green-300 p-5 rounded-2xl border-l-4 border-purple-500 hover:border-purple-600 shadow-sm hover:bg-green-400 hover:shadow-md transition">
+          <FaUsers className="text-2xl text-purple-500 mt-1" />
           <div>
             <h4 className="font-semibold text-[#03373D] mb-1">
               Customer-Centric Focus
@@ -57,8 +59,8 @@ const Mission = () => {
         </div>
 
         {/* Global */}
-        <div className="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition">
-          <FaGlobeAsia className="text-2xl text-primary mt-1" />
+        <div className="flex gap-4 items-start bg-indigo-300 p-5 rounded-2xl border-l-4 border-green-500 hover:border-green-600 shadow-sm hover:bg-indigo-400 hover:shadow-md transition">
+          <FaGlobeAsia className="text-2xl text-green-700 mt-1" />
           <div>
             <h4 className="font-semibold text-[#03373D] mb-1">
               Global Reach, Local Touch
@@ -71,8 +73,8 @@ const Mission = () => {
         </div>
 
         {/* Sustainability */}
-        <div className="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition">
-          <FaLeaf className="text-2xl text-primary mt-1" />
+        <div className="flex gap-4 items-start bg-amber-300 p-5 rounded-2xl border-l-4 border-emerald-500 hover:border-emerald-600 shadow-sm hover:bg-amber-400 hover:shadow-md transition">
+          <FaLeaf className="text-2xl text-emerald-500 mt-1" />
           <div>
             <h4 className="font-semibold text-[#03373D] mb-1">
               Sustainability Commitment
@@ -83,9 +85,10 @@ const Mission = () => {
             </p>
           </div>
         </div>
+
       </div>
     </div>
-    );
+  );
 };
 
 export default Mission;

@@ -18,14 +18,14 @@ const Terms = () => {
       </h2>
 
       {/* Intro */}
-      <p className="text-gray-600">
+      <p className="text-white">
         Our strength lies in our people and the powerful network of partners we
         have cultivated. We are a collective of dedicated professionals, driven
         by a shared vision of logistical excellence.
       </p>
 
       {/* Core Team */}
-      <div className="bg-base-200 p-5 rounded-xl shadow-sm space-y-4">
+      <div className="bg-blue-100 p-5 rounded-xl shadow-sm space-y-4">
         <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
           <FaUsersGear className="text-primary text-2xl" />
           The Core Team
@@ -62,7 +62,7 @@ const Terms = () => {
       </div>
 
       {/* Partnerships */}
-      <div className="bg-base-200 p-5 rounded-xl shadow-sm space-y-4">
+      <div className="bg-cyan-200 p-5 rounded-xl shadow-sm space-y-4">
         <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
           <MdHandshake className="text-primary text-2xl" />
           Strategic Partnerships

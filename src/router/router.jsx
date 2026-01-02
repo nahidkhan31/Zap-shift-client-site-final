@@ -34,10 +34,10 @@ export const router = createBrowserRouter([
                 index: true,
                 Component: Story
             },
-            {
-                path: "story",
-                Component: Story
-            },
+            // {
+            //     path: "story",
+            //     Component: Story
+            // },
             {
                 path: "mission",
                 Component: Mission

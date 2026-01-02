@@ -54,9 +54,9 @@ const BangladeshMap = ({ serviceCenters }) => {
   return (
     <div className="relative h-[800px] w-full rounded-2xl overflow-hidden shadow-xl">
 
-      {/* 🔍 SEARCH OVERLAY */}
+      {/* SEARCH OVERLAY */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[1100] w-full max-w-lg px-4">
-        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+        <div className="bg-white text-black rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
 
           {/* Input */}
           <div className="flex items-center gap-3 px-5 py-4">
@@ -109,7 +109,7 @@ const BangladeshMap = ({ serviceCenters }) => {
         </p>
       </div>
 
-      {/* 🗺️ MAP */}
+      {/* MAP */}
       <MapContainer
         center={position}
         zoom={8}

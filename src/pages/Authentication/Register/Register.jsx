@@ -29,7 +29,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-cyan-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br px-4">
       <div className="card w-full max-w-md bg-base-100 shadow-2xl rounded-3xl">
         <div className="card-body p-8">
 

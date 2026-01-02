@@ -1,9 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../SocialLogin/SocialLogin";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
+import useAuth from "../../../hooks/useAuth";
+import toast from "react-hot-toast";
+import { AiFillCheckCircle, AiFillCloseCircle, AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Login = () => {
+  const { signIn } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from || "/";
   const {
     register,
     handleSubmit,
@@ -11,11 +18,44 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    const email = data.email;
+    const password = data.password;
+    // console.log(data);
+
+    //   tost......
+    toast.loading(
+      <div className="flex items-center gap-2">
+        <AiOutlineLoading3Quarters className="animate-spin text-blue-500 text-lg" />
+        <span>Login...</span>
+      </div>,
+      { id: "Login" }
+    );
+
+    signIn(email, password)
+      .then(() => {
+        toast.success(
+          <div className="flex items-center gap-2">
+            <AiFillCheckCircle className="text-green-500 text-xl" />
+            <span>Successfully logged in</span>
+          </div>,
+          { id: "Login" }
+        );
+        navigate(from);
+      })
+      .catch((error) => {
+        toast.error(
+          <div className="flex items-center gap-2">
+            <AiFillCloseCircle className="text-red-500 text-xl" />
+            <span>Login failed</span>
+          </div>,
+          { id: "Login" }
+        );
+        console.error(error);
+      });
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-cyan-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br px-4">
       <div className="card w-full max-w-md bg-base-100 shadow-2xl rounded-3xl">
         <div className="card-body p-8">
           <div className="text-center mb-6">

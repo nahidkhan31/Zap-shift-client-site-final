@@ -12,7 +12,8 @@ How many tools i use in this projects
 10. npm install react-hook-form (important)
 11. npm install firebase
 12. npm install react-hot-toast
-
+13. npm install sweetalert2
+ 
 
 
 

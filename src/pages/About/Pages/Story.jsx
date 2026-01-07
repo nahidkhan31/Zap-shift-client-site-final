@@ -6,7 +6,7 @@ const Story = () => {
     <div className="space-y-6">
 
       {/* Intro */}
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-white leading-relaxed">
         Our journey began with a simple yet powerful idea — to remove the stress,
         uncertainty, and delays from parcel delivery. What started as a small
         initiative has grown into a trusted logistics solution relied upon by

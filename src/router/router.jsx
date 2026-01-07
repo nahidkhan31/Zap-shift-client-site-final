@@ -11,6 +11,8 @@ import Story from "../pages/About/Pages/Story";
 import Mission from "../pages/About/Pages/Mission";
 import Success from "../pages/About/Pages/Success";
 import Terms from "../pages/About/Pages/Terms";
+import PrivateRoute from "../routes/PrivateRoute";
+import SendParcel from "../pages/SendParcel/SendParcel";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +27,11 @@ export const router = createBrowserRouter([
         path: "coverage",
         Component: Coverage,
         loader: () => fetch("/service-center.json"),
+      },
+      {
+        path: "send-parcel",
+        element: <PrivateRoute><SendParcel></SendParcel></PrivateRoute>,
+        loader: ()=> fetch("/service-center.json"),
       },
       {
         path: "about",
@@ -54,7 +61,7 @@ export const router = createBrowserRouter([
       }
     ],
   },
-//   second steps....
+//   second steps only authentication section....
   {
     path: "/",
     Component: AuthLayout,

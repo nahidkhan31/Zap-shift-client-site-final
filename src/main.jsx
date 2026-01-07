@@ -11,7 +11,7 @@ AOS.init();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="font-urbanist max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
      <AuthProvider>
       <Toaster position="top-center" />
        <RouterProvider router={router} />,

@@ -13,6 +13,7 @@ How many tools i use in this projects
 11. npm install firebase
 12. npm install react-hot-toast
 13. npm install sweetalert2
+14. npm install axios
  
 
 

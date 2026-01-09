@@ -14,6 +14,7 @@ How many tools i use in this projects
 12. npm install react-hot-toast
 13. npm install sweetalert2
 14. npm install axios
+15. npm i @tanstack/react-query
  
 
 

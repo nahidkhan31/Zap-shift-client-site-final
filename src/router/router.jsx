@@ -13,6 +13,9 @@ import Success from "../pages/About/Pages/Success";
 import Terms from "../pages/About/Pages/Terms";
 import PrivateRoute from "../routes/PrivateRoute";
 import SendParcel from "../pages/SendParcel/SendParcel";
+import DashboardLayout from "../layouts/DashboardLayout";
+import MyParcels from "../pages/Dashboard/MyParcels/MyParcels";
+import DashboardHome from "../pages/Dashboard/DashboardHome/DashboardHome";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -77,4 +80,18 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+    children: [
+      {
+        index:true,
+        Component: DashboardHome
+      },
+      {
+        path: 'my-parcels',
+        Component: MyParcels
+      }
+    ]
+  }
 ]);
